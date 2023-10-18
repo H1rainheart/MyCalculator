@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Calculator</title>
+		<script src="calcu.js"></script>
+
+	<style type="text/css">
+
+
+		input[type="text"] {
+            width: 80%;
+            padding: 15px;
+            font-size: 32px;
+            background-color: #f2f2f2;
+            border: solid 1px #f2f2f2;
+        }
+		button{
+			font-size: 22px;
+			padding: 10px;
+		}
+
+		.inner-elements{
+			background-color: #f2f2f2;
+			border: solid 1px #ffffff;
+			border-radius: 100px;
+			padding: 15px 23px;
+		}
+		.outer-elements{
+			background-color: #c1def5;
+			border: solid 1px #ffffff;
+			border-radius: 100px;
+			padding: 15px 22px;
+		}
+		.input-display{
+			width:93%;
+			padding: 10px;
+			background-color: #f2f2f2;
+			border-radius: 5px 5px 20px 20px
+		}
+		.calcu-container{
+			width:100%;
+			max-width: 290px;
+			border: solid 1px #f2f2f2;
+			padding-bottom: 20px;
+			border-radius: 10px;
+		}
+	</style>	
+</head>
+<body>
+
+<center>
+
+<div>
+	<h1>My Calculator</h1>
+</div>
+<div class="calcu-container">
+
+<div class="input-display"><input type="text" id="display" readonly></div>
+
+<br>
+<button type="button" class="outer-elements" style="background-color: #c1f5d5;padding: 15px 17px;" onclick="clearDisplay()">ac</button>
+<button type="button" class="outer-elements" onclick="toDispla(['(', ')'])">()</button>
+<button type="button" class="outer-elements" style="padding: 15px 19px;" onclick="toDisplay('%')">%</button>
+<button type="button" class="outer-elements" style="padding: 15px 23px;" onclick="toDisplay('/')">÷</button>
+<br>
+<button type="button" class="inner-elements" onclick="toDisplay('7')">7</button>
+<button type="button" class="inner-elements" onclick="toDisplay('8')">8</button>
+<button type="button" class="inner-elements" onclick="toDisplay('9')">9</button>
+<button type="button" class="outer-elements" onclick="toDisplay('*')">x</button>
+<br>
+<button type="button" class="inner-elements" onclick="toDisplay('4')">4</button>
+<button type="button" class="inner-elements" onclick="toDisplay('5')">5</button>
+<button type="button" class="inner-elements" onclick="toDisplay('6')">6</button>
+<button type="button" class="outer-elements" onclick="toDisplay('-')">–</button>
+<br>
+<button type="button" class="inner-elements" onclick="toDisplay('1')">1</button>
+<button type="button" class="inner-elements" onclick="toDisplay('2')">2</button>
+<button type="button" class="inner-elements" onclick="toDisplay('3')">3</button>
+<button type="button" class="outer-elements" onclick="toDisplay('+')">+</button>
+<br>
+<button type="button" class="inner-elements" onclick="toDisplay('0')">0</button>
+<button type="button" class="inner-elements" onclick="toDisplay('.')">•</button>
+<button type="button" class="inner-elements" onclick="clearDisplay()">c</button>
+<button type="button" class="outer-elements" style="background-color: #e4cbf1" onclick="calcuResult()">=</button>
+
+
+</center>
+
+</div>
+</body>
+</html>
